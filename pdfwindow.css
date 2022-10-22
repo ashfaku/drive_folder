@@ -1,9 +1,12 @@
 #my_pdf_viewer
 {
-    max-width: 40%;
     margin-left: 10%;
     max-height: 70%;
-    background-color: red;
+    background-color: blue;
+    width: 500px;
+    height: 110px;
     overflow-x: hidden;
     overflow-y: auto;
+    text-align:justify;
+}
 }
