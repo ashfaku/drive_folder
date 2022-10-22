@@ -1,9 +1,9 @@
 #my_pdf_viewer
 {
     margin-left: 10%;
-    background-color: yellow;
-    width: 500px;
-    height: 110px;
+    background-color: red;
+    width: 60%;
+    height: 50%;
     overflow-x: hidden;
     overflow-y: auto;
     text-align:justify;
