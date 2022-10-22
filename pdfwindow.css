@@ -4,5 +4,6 @@
     margin-left: 10%;
     max-height: 70%;
     background-color: red;
-    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
