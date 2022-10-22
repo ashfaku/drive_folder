@@ -15,9 +15,9 @@
                 <canvas id="pdf_renderer"></canvas>
             </div>
             <div id="navigation_controls">
-                <button id="go_previous">Previous</button>
-                <input id="current_page" value="1" type="number"/>
-                <button id="go_next">Next</button>
+                <button onclick = "back();" id="go_previous">Previous</button>
+                <input id="current_page" value="100" type="number"/>
+                <button onclick = "forward();" id="go_next">Next</button>
             </div>
             <div id="zoom_controls">  
                 <button id="zoom_in">+</button>
@@ -27,10 +27,21 @@
         <script>
             var myState = {
                 pdf: null,
-                currentPage: 5,
+                currentPage: 100,
                 zoom: 1
             }
+            function back()
+            {
+                myState.currentPage--;
+                render();
+            }
+            function forward()
+            {
+                myState.currentPage++;
+                render();
+            }
             function render() {
+
                 myState.pdf.getPage(myState.currentPage).then((page) => {
 
                     var canvas = document.getElementById("pdf_renderer");
