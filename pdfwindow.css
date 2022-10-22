@@ -4,5 +4,5 @@
     margin-left: 10%;
     max-height: 70%;
     background-color: red;
-    overflow: hidden;
+    overflow-y: hidden;
 }
