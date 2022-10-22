@@ -1,8 +1,7 @@
 #my_pdf_viewer
 {
     margin-left: 10%;
-    max-height: 70%;
-    background-color: blue;
+    background-color: yellow;
     width: 500px;
     height: 110px;
     overflow-x: hidden;
