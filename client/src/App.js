@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Folder from './Folder.js';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import PDFPage from './PDFPage.js';
 const SearchPage = ({ match, location }) => {
   console.log(match);
   console.log(location);
@@ -91,7 +92,7 @@ function App() {
     <Router>
         <Routes>
             <Route exact path = "/" element = {<div>{files}</div>} />
-            {routeList}
+            <Route exact path = "/pdfs" element = {<PDFPage />} />
         </Routes>
     </Router>
   );

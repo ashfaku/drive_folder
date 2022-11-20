@@ -4,9 +4,12 @@ import { usePdf } from '@mikecousins/react-pdf';
 const PDFPage = (props) => {
   const [page, setPage] = useState(1);
   const canvasRef = useRef(null);
+  const queryParams = new URLSearchParams(window.location.search)
+  const term = queryParams.get("fp");
 
+  //console.log(term); 
   const { pdfDocument, pdfPage } = usePdf({
-    file: './index.pdf',
+    file: '..\index.pdf',
     page,
     canvasRef,
   });
