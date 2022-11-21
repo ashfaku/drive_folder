@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { usePdf } from 'react-pdf';
+import { usePdf } from '@mikecousins/react-pdf';
 
 const PDFPage = (props) => {
   const [page, setPage] = useState(1);
