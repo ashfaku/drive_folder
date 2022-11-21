@@ -6,10 +6,10 @@ const PDFPage = (props) => {
   const canvasRef = useRef(null);
   const queryParams = new URLSearchParams(window.location.search)
   const term = queryParams.get("fp");
-
-  //console.log(term); 
+  //"./../client/public/PDFs/Colleges/Binghamton University /C/L01 - Intro.pdf"
+  const path = '.' + term.substring(18); 
   const { pdfDocument, pdfPage } = usePdf({
-    file: '..\index.pdf',
+    file: './PDFs/Colleges/Binghamton University/jpg.pdf',
     page,
     canvasRef,
   });

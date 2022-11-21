@@ -70,7 +70,7 @@ const Folder = (props) =>
         if (name.substr(name.length - 3) === 'pdf')
         {
           const t = tab + 50;
-          files.push(<File path = {children[elem].path} name = {name} tabbing = {t} />);
+          files.push(<File path = {children[elem].path} name = {name} tabbing = {t-50} />);
           var route = "/" + name;
           props.routes.push(route);
          // console.log(props.routes);

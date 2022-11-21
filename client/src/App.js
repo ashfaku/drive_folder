@@ -80,11 +80,11 @@ function App() {
       var children = files.files;
       var folder = <Folder info = {children} tab = {0} routes = {routes} />;
       setFiles(folder);
-      for (let elem in routes)
+     /* for (let elem in routes)
         routeTags.push(<Route exact path = {routes[elem]} element = {<div>{elem}</div>}/>);
       for (let elem in routeTags)
         console.log(routeTags[elem].props.path);
-
+*/
     })
   }, []);
   

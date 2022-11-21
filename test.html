@@ -1,0 +1,30 @@
+<!doctype html> 
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">      
+        <title>Drive</title>
+        <link rel="stylesheet" href="pdfwindow.css">
+    </head>
+    <body>
+        <div id="my_pdf_viewer">
+            <div id="canvas_container">
+       <!--  
+               <canvas id="pdf_renderer"></canvas>
+           !--> 
+            </div>
+            <div id="navigation_controls">
+                <button onclick = "back();" id="go_previous">Previous</button>
+                <input id="current_page" value="100" type="number"/>
+                <button onclick = "forward();" id="go_next">Next</button>
+            </div>
+            <div id="zoom_controls">  
+                <button id="zoom_in">+</button>
+                <button id="zoom_out">-</button>
+            </div>
+        </div>
+        <script src="https://unpkg.com/pdfjs-dist@2.0.489/build/pdf.min.js"></script>
+        <script src = "index.js"></script>
+
+    </body>
+</html>
