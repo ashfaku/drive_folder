@@ -13,7 +13,7 @@ const PDFPage = (props) => {
     page,
     canvasRef,
   });
-
+  console.log(pdfPage);
   return (
     <div>
       {!pdfDocument && <span>Loading...</span>}

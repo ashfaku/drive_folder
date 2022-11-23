@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import File from './File.js';
 import './Folder.css';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function getMaxHeight(e)
 {
@@ -40,7 +39,7 @@ const Folder = (props) =>
           else
           {
             e.target.parentElement.parentElement.children[0].children[0].innerHTML = "-";
-            var scrollHeight = secondChild.scrollHeight;
+            scrollHeight = secondChild.scrollHeight;
             secondChild.style.maxHeight = scrollHeight + "px";
             while (secondChild.parentElement)
             {

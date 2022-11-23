@@ -1,14 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-  NavLink,
-  useNavigate,
-  createSearchParams,
-} from 'react-router-dom';
+import React from 'react';
 const File = (props) => {
     var tab = props.tabbing;
     const filePath =  "./" + props.path;
