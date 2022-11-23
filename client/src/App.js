@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Folder from './Folder.js';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import PDFPage from './PDFPage.js';
+import data from './json.json';
 const SearchPage = ({ match, location }) => {
   console.log(match);
   console.log(location);
@@ -14,7 +15,7 @@ const SearchPage = ({ match, location }) => {
     );
 }
 async function callBackendAPI() {
-  const response = await fetch('/express_backend');
+  const response = await fetch('./express_backend');
   const body = await response.json();
 
   if (response.status !== 200) {
@@ -75,17 +76,17 @@ function App() {
 
   var routeTags = [];
   useEffect(() => {
-    callBackendAPI().then((files) => 
+    console.log(data);
+    var folder = <Folder info = {data} tab = {0} routes = {routes} />;
+    setFiles(folder);
+ /*   callBackendAPI().then((files) => 
     {
       var children = files.files;
       var folder = <Folder info = {children} tab = {0} routes = {routes} />;
       setFiles(folder);
-     /* for (let elem in routes)
-        routeTags.push(<Route exact path = {routes[elem]} element = {<div>{elem}</div>}/>);
-      for (let elem in routeTags)
-        console.log(routeTags[elem].props.path);
-*/
-    })
+     
+      console.log(data);
+    })*/
   }, []);
   
   return ( 
