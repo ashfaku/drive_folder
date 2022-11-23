@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useNavigate, createSearchParams } from "react-router-dom";
 const File = (props) => {
     var tab = props.tabbing;
     const filePath =  "./" + props.path;
