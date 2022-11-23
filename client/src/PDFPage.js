@@ -9,7 +9,7 @@ const PDFPage = (props) => {
   //"./../client/public/PDFs/Colleges/Binghamton University /C/L01 - Intro.pdf"
   const path = '.' + term.substring(18); 
   const { pdfDocument, pdfPage } = usePdf({
-    file: './PDFs/Colleges/Binghamton University/jpg.pdf',
+    file: path,
     page,
     canvasRef,
   });

@@ -55,7 +55,7 @@ const Folder = (props) =>
         }
 
       } 
-      style = {{ display: 'inline-block', cursor: 'pointer', color: 'red'}}>{data.name}</button>
+      style = {{ display: 'inline-block', cursor: 'pointer', color: 'red'}}>{data.name.replaceAll("_", " ")}</button>
     </div>;
     for (let elem in children)
     {
@@ -70,13 +70,13 @@ const Folder = (props) =>
         if (name.substr(name.length - 3) === 'pdf')
         {
           const t = tab + 50;
-          files.push(<File path = {children[elem].path} name = {name} tabbing = {t-50} />);
+          files.push(<File path = {children[elem].path} name = {name.replaceAll("_", " ")} tabbing = {t-50} />);
           var route = "/" + name;
           props.routes.push(route);
          // console.log(props.routes);
         }
         else
-          files.push(<div style = {{marginLeft: tab + 50}}>{name}</div>);
+          files.push(<div style = {{marginLeft: tab + 50}}>{name.replaceAll("_", " ")}</div>);
       }
     }
     for (let elem in files)
