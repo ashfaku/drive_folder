@@ -4,10 +4,16 @@ const express = require('express')
 const app = express()
 const port = process.env.port || 5001;
 //console.log(dirTree("./../client/public/PDFs"));
-const trees = dirTree('./../client/public/PDFs');
+const trees = dirTree('./../client/public/pdf');
 app.get('/express_backend', (req, res) => { 
-    res.send({ files: dirTree("./../client/public/PDFs") });
+    res.send({ files: dirTree("./../client/public/pdf") });
 });
+/*
+fs.writeFile('json.json', JSON.stringify(trees), function (err) {
+  if (err) throw err;
+  console.log('Saved!');
+});*/
+/*
 const makeNew = (tree) =>
 {
  // console.log(tree.path);
@@ -37,7 +43,7 @@ const makeNew = (tree) =>
   }
 }
 makeNew(trees);
-
+*/
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
