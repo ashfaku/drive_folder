@@ -1,19 +1,10 @@
 //import './App.css';
-import React, { useState, useEffect } from 'react';
+import React from 'react'; //{ useState, useEffect } from 'react';
 import Folder from './Folder.js';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PDFPage from './PDFPage.js';
 import data from './json.json';
-const SearchPage = ({ match, location }) => {
-  console.log(match);
-  console.log(location);
-  return (
-      <p>
-        <strong>Query Params: </strong>
-        {match}
-      </p>
-    );
-}
+/*
 async function callBackendAPI() {
   const response = await fetch('./express_backend');
   const body = await response.json();
@@ -69,16 +60,15 @@ function generateHTML(data, tab)
 
   </div>);
 }
+*/
 function App() {
-  const [files, setFiles] = useState([]);
-  const [routeList, setRoutes] = useState([<Route exact path = "/Cookbook" element = {<div>1</div>}/>]);
+//  const [files, setFiles] = useState([]);
   var routes = [];
 
-  var routeTags = [];
-  useEffect(() => {
-    console.log(data);
+ // useEffect(() => {
+  //  console.log(data);
     var folder = <Folder info = {data} tab = {0} routes = {routes} />;
-    setFiles(folder);
+   // setFiles(folder);
  /*   callBackendAPI().then((files) => 
     {
       var children = files.files;
@@ -87,12 +77,12 @@ function App() {
      
       console.log(data);
     })*/
-  }, []);
+  //}, []);
   
   return ( 
     <Router>
         <Routes>
-            <Route exact path = "/" element = {<div>{files}</div>} />
+            <Route exact path = "/" element = {<div>{folder}</div>} />
             <Route exact path = "/pdfs" element = {<PDFPage />} />
         </Routes>
     </Router>
