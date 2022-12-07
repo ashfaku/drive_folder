@@ -4,9 +4,9 @@ const express = require('express')
 const app = express()
 const port = process.env.port || 5001;
 //console.log(dirTree("./../client/public/PDFs"));
-const trees = dirTree('./../client/public/PDFs');
+const trees = dirTree('./PDFs');
 app.get('/express_backend', (req, res) => { 
-    res.send({ files: dirTree("./../client/public/pdf") });
+    res.send({ files: trees });
 });
 
 fs.writeFile('json.json', JSON.stringify(trees), function (err) {

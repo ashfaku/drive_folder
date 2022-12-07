@@ -1,3 +1,3 @@
-client/node_modules
-server/node_modules
-client/public/PDFs
+node_modules
+public/PDFs
+server/PDFs

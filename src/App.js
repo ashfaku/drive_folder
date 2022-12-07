@@ -64,21 +64,21 @@ function generateHTML(data, tab)
 function App() {
 //  const [files, setFiles] = useState([]);
   var routes = [];
-
- // useEffect(() => {
-  //  console.log(data);
-    var folder = <Folder info = {data} tab = {0} routes = {routes} />;
-   // setFiles(folder);
- /*   callBackendAPI().then((files) => 
+  var folder = <Folder info = {data} tab = {0} routes = {routes} />;
+  
+ /* useEffect(() => {
+    console.log(data);
+    setFiles(folder);
+    callBackendAPI().then((files) => 
     {
       var children = files.files;
       var folder = <Folder info = {children} tab = {0} routes = {routes} />;
       setFiles(folder);
      
       console.log(data);
-    })*/
-  //}, []);
-  
+    })
+  }, []);
+  */
   return ( 
     <Router>
         <Routes>
@@ -87,6 +87,5 @@ function App() {
         </Routes>
     </Router>
   );
-
 }
 export default App;
