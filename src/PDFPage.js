@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 const PDFPage = () => {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-  const queryParams = new URLSearchParams(window.location.search)
+  const queryParams = new URLSearchParams(window.location.search);
   let term = queryParams.get("fp");
+  console.log(term);
   return (
       <Document file={decodeURIComponent(term)} >
-        <Page pageNumber={pageNumber} />
+        <Page pageNumber={5} />
       </Document>
   );
 };

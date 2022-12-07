@@ -4,6 +4,7 @@ import Folder from './Folder.js';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PDFPage from './PDFPage.js';
 import data from './json.json';
+// https://github.com/PSPDFKit-labs/react-pdf-demo -> sample react-pdf demo
 /*
 async function callBackendAPI() {
   const response = await fetch('./express_backend');
